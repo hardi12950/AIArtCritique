@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 def analyze_artwork_with_gpt4_vision(url_input):
-        api_key = "sk-proj-JghKNqoMraSXoHi9yz9GT3BlbkFJYaM4RVnL9T3svNOsbui5"
+        api_key = st.secrets('OPENAI_API_KEY')
         client = OpenAI(api_key=api_key)
 
         response = client.chat.completions.create(
